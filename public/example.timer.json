@@ -1,0 +1,78 @@
+{
+  "macros": {
+    "start-exercise": [
+      "play boxing-bell.mp3"
+    ],
+    "half-exercise": [
+      "play ding-sound-effect-1.mp3"
+    ],
+    "start-short-rest": [
+      "play taco-bell-bong-sfx.mp3"
+    ],
+    "start-long-rest": [
+      "play mm_clocktower_bell.mp3"
+    ],
+    "success": [
+      "play kids_cheering.mp3"
+    ],
+    "ready": [
+      "display green Ready?"
+    ],
+    "exercise": [
+      "start-exercise",
+      "wait 20",
+      "half-exercise",
+      "wait 20"
+    ],
+    "exercise-1": [
+      "time 40 green A",
+      "exercise"
+    ],
+    "exercise-2": [
+      "time 40 blue B",
+      "exercise"
+    ],
+    "short-rest": [
+      "time 20 yellow SWAP",
+      "start-short-rest",
+      "wait 20"
+    ],
+    "cycle": [
+      "exercise-1",
+      "short-rest",
+      "exercise-2",
+      "short-rest",
+      "exercise-1",
+      "short-rest",
+      "exercise-2",
+      "short-rest",
+      "exercise-1",
+      "short-rest",
+      "exercise-2"
+    ],
+    "long-rest": [
+      "time 120 red ROTATE",
+      "start-long-rest",
+      "wait 120"
+    ],
+    "done": [
+      "display green 🎉 Done! 🎉",
+      "success"
+    ]
+  },
+  "sequence": [
+    "ready",
+    "cycle",
+    "long-rest",
+    "cycle",
+    "long-rest",
+    "cycle",
+    "long-rest",
+    "cycle",
+    "long-rest",
+    "cycle",
+    "long-rest",
+    "cycle",
+    "done"
+  ]
+}
