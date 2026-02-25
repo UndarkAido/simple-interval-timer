@@ -11,7 +11,7 @@ function Onboard({setSession}: {setSession: Dispatch<SetStateAction<Session | un
     const [ajv, setAjv] = useState<Ajv | null>(null);
 
     useEffect(() => {
-        fetch('/timer.schema.json')
+        fetch('timer.schema.json')
             .then(response => response.json())
             .then(schema => {
                 const ajvInstance = new Ajv();
@@ -140,7 +140,7 @@ function Onboard({setSession}: {setSession: Dispatch<SetStateAction<Session | un
             </p>
             <p className="ant-upload-text">Click or drag files to this area</p>
             <p className="ant-upload-hint">
-                Required: <a href="../public/timer.schema.json">.timer.json</a>
+                Required: <a href="timer.schema.json">.timer.json</a>
             </p>
             <p className="ant-upload-hint">
                 Supported extras: .mp3
